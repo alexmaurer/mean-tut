@@ -1,0 +1,40 @@
+
+<div class="row">
+	<div class="col-xs-1 col-sm-3"></div>
+	<div class="col-xs-10 col-sm-6">
+		<h2>{{#if title}} {{ title }}{{/if}}</h2>
+		<div class="sign-up">
+			<form name="create-user-form" id="create-user-form" method="post" novalidate>
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input type="text" class="form-control" id="firstName" name="firstName" value="{{ input.firstName }}" required />
+				</div>
+				<div class="form-group">
+					<label for="lastName">Last Name</label>
+					<input type="text" class="form-control" id="lastName" name="lastName" value="{{ input.lastName }}" required />
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" id="email" name="email" value="{{ input.email }}" required />
+				</div>
+				<div class="form-group">
+					<label for="storeCity">City</label>
+					<input type="text" class="form-control" id="storeCity" name="storeCity" value="{{ input.storeCity }}" required />
+				</div>
+				<div class="form-group">
+					<label for="storeState">State</label>
+					<input type="text" class="form-control" id="storeState" name="storeState"  value="{{ input.storeState }}"required />
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" name="password" autocomplete="off" value="{{ input.password }}" required />
+				</div>
+				<div class="form-submit">
+					<input type="submit" class="form-control" value="Create my account" />
+				</div>
+				<span class="error">{{error}}</span>
+			</form>
+		</div>
+	</div>
+	<div class="col-xs-1 col-sm-3"></div>
+</div>
